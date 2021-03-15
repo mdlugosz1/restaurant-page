@@ -1,0 +1,23 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "Restaruant page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdlugosz1/restaurant-page.git"
+  },
+  "author": "Michał Długosz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdlugosz1/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/mdlugosz1/restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.25.1",
+    "webpack-cli": "^4.5.0"
+  }
+}
