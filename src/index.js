@@ -25,7 +25,7 @@ function createNav() {
 
 function createFooter() {
     const footer = document.createElement('footer');
-    footer.textContent = 'Created by ja';
+    footer.textContent = 'Created by ';
     return footer;    
 }
 
