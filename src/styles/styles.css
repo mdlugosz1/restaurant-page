@@ -1,4 +1,32 @@
 body {
-    background: no-repeat url('/src/images/food-3309418_1920.jpg');
+    background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1014&q=80');
     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline-block;
+    padding: 1em;
+    border: 1px solid white;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.home, .contact, .menu {
+    margin: 10em;
+    background: rgba(255, 255, 255, 0.7);
+    min-height: 20em;
+    color: black;
 }

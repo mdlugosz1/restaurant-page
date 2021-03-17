@@ -1,36 +1,24 @@
-const content = document.querySelector('#content');
+import {loadInitialPage} from './initial-page'
+import {createHomeContent} from './home'
+import {createContact} from './contact'
+import {createMenu} from './menu'
 
-function createHeader(className) {
-    const header = document.createElement('header');
-    header.className = className;
-    header.textContent = '';
-    return header;
-}
 
-function createNav() {
-    const nav = document.createElement('nav');
-    const navList = document.createElement('ul');
-    const pageModules = ['home', 'menu', 'contact'];
+loadInitialPage(createHomeContent());
 
-    for (let i = 0; i < pageModules.length; i++) {
-        const singleModule = document.createElement('li');
-        singleModule.setAttribute('id', pageModules[i]);
-        singleModule.textContent = pageModules[i];
-        navList.appendChild(singleModule);
-    }
-    
-    nav.appendChild(navList);
-    return nav;
-}
+const buttons = document.querySelectorAll('li');
+const contentSpace = document.querySelector('.tab');
 
-function createFooter() {
-    const footer = document.createElement('footer');
-    footer.textContent = 'Created by ';
-    return footer;    
-}
-
-content.appendChild(createHeader('header'));
-content.appendChild(createNav());
-content.appendChild(createFooter());
-
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        contentSpace.innerHTML = '';
+        if (button.textContent === 'home') {
+            contentSpace.appendChild(createHomeContent());
+        } else if (button.textContent === 'menu') {
+            contentSpace.appendChild(createMenu());
+        } else {
+            contentSpace.appendChild(createContact());
+        }
+    })
+})
 
